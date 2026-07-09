@@ -1,11 +1,11 @@
 /* Minimal style inspired by lorenzkuhn.com (WordPress Cyanotype theme vibes) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 :root{--bg:#ffffff;--text:#000000;--muted:#444;--link:#000;--border:#eaeaea}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
+html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:15px}
 .container{max-width:900px;margin:0 auto;padding:24px}
 .site-header{padding:24px 0;border-bottom:1px solid var(--border)}
-.site-title{font-size:28px;margin:0;font-family:"Roboto Mono",monospace}
+.site-title{font-size:28px;margin:0;font-family:"JetBrains Mono",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace}
 .site-title a{color:var(--text);text-decoration:none}
 .social{display:flex;gap:12px;margin-top:8px}
 .social a{color:var(--text);text-decoration:none}
@@ -13,11 +13,11 @@ html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe U
 .columns{display:flex;gap:24px;align-items:flex-start}
 .column-left{flex:0 0 25%;max-width:25%}
 .column-right{flex:1}
-@media(max-width:800px){.columns{flex-direction:column}.column-left,.column-right{max-width:100%}}
+@media(max-width:800px){.columns{flex-direction:column}.column-left{max-width:340px}.column-right{max-width:100%}}
 
 img.profile{display:block;max-width:100%;height:auto;border-radius:4px}
 
-h2{font-size:22px;margin:28px 0 10px;font-family:"Roboto Mono",monospace}
+h2{font-size:22px;margin:48px 0 14px;font-family:"JetBrains Mono",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace}
 a{color:var(--link)}
 p{margin:0 0 14px}
 ul{margin:0 0 14px;padding-left:20px}
@@ -28,8 +28,9 @@ ul{margin:0 0 14px;padding-left:20px}
 .icon{width:18px;height:18px;display:inline-block;vertical-align:text-bottom;fill:currentColor}
 
 /* Publications */
-.pub-item{margin:0 0 18px}
-.pub-title{font-weight:700}
+.pub-item{margin:0 0 14px;border:1px solid var(--border);border-radius:8px;padding:16px 18px;overflow:hidden}
+.pub-title{font-weight:700;font-size:16px;margin:0 0 2px}
+.pub-authors{margin:0 0 2px}
 .pub-meta{color:var(--muted);display:inline}
 .badge-teal{color:#118a8a;font-weight:700}
 
@@ -56,12 +57,35 @@ p.tight {
 img,svg,video{max-width:100%;height:auto}
 
 /* Make content images block-level and centered nicely. */
-.pub-item img{display:block;width:100%;height:auto;margin:16px auto}
-
-/* Optional: cap very wide figures while staying fluid. */
-.pub-item img{max-width:.400px}
-
-.pub-item img{display:block;max-width:100%;height:auto;margin:16px auto}
+.pub-item img{display:block;max-width:66%;height:auto;margin:16px auto}
 @media (max-width:600px){
-  .pub-item img{width:min(88vw,520px)!important}
+  .pub-item img{max-width:88%!important}
 }
+
+/* Open-source tools row */
+.tools-row{display:flex;gap:20px;margin:24px 0 14px;align-items:center;justify-content:center}
+.tool-mini{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:opacity .15s ease;height:60px}
+.tool-mini:hover{opacity:.7}
+.tool-mini img,.tool-mini svg{max-width:100%;max-height:50px;object-fit:contain}
+
+/* News entries */
+.news-entry{margin:0 0 4px;line-height:1.5}
+
+/* News show-more toggle */
+details.news-more{margin-top:2px}
+details.news-more summary{cursor:pointer;color:var(--muted);font-size:13px;list-style:none;padding:2px 0}
+details.news-more summary::-webkit-details-marker{display:none}
+details.news-more[open] summary{display:none}
+
+/* Scroll-reveal entrance */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1.1s cubic-bezier(0.22,1,0.36,1) var(--d,0ms),transform 1.1s cubic-bezier(0.22,1,0.36,1) var(--d,0ms)}
+.reveal--in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* Collapsible sections */
+details.section-toggle{border:none;margin:32px 0 0}
+details.section-toggle>summary{list-style:none;cursor:pointer;margin-bottom:16px}
+details.section-toggle>summary::-webkit-details-marker{display:none}
+details.section-toggle>summary h2{display:inline;margin:48px 0 14px}
+details.section-toggle>summary h2::before{content:'▾ ';font-size:18px;color:#777;vertical-align:baseline}
+details.section-toggle:not([open])>summary h2::before{content:'▸ '}
