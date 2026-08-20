@@ -71,6 +71,7 @@ img,svg,video{max-width:100%;height:auto}
 
 /* News entries */
 .news-entry{margin:0 0 4px;line-height:1.5}
+.news-entry strong{font-family:"VT323",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;font-weight:300;letter-spacing:1px;font-size:17px}
 
 /* News show-more toggle */
 details.news-more{margin-top:2px}
