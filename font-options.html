@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monospace Font Options</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Courier+Prime:wght@400;700&family=Space+Mono:wght@400;700&family=Inconsolata:wght@400;700&family=JetBrains+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&family=Courier+Prime:wght@400;700&family=Anonymous+Pro:wght@400;700&family=Overpass+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fff;
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+            margin-bottom: 60px;
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+        .font-option {
+            background: transparent;
+            padding: 40px 20px;
+            margin-bottom: 0;
+            border-bottom: 1px solid #e0e0e0;
+            border-left: 3px solid transparent;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .font-option:hover {
+            background: #f9f9f9;
+            border-left-color: #999;
+        }
+        .font-option.selected {
+            background: #f0f0f0;
+            border-left-color: #000;
+        }
+        .font-option:last-child {
+            border-bottom: none;
+        }
+        .font-name {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .font-sample {
+            font-size: 32px;
+            line-height: 1.5;
+            margin: 0 0 12px 0;
+            color: #000;
+        }
+        .button {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+        .button:hover {
+            background: #f0f0f0;
+            border-color: #000;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #0a7;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5fff9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monospace Font Options for Headers</h1>
+    
+    <div class="font-option" onclick="selectFont('VT323', 'VT323')">
+        <div class="font-name">1. VT323 (retro terminal) — classic CRT vibes</div>
+        <p class="font-sample" style="font-family: 'VT323', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Courier Prime', 'Courier Prime')">
+        <div class="font-name">2. Courier Prime (typewriter)</div>
+        <p class="font-sample" style="font-family: 'Courier Prime', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('IBM Plex Mono', 'IBM Plex Mono')">
+        <div class="font-name">3. IBM Plex Mono (corporate terminal)</div>
+        <p class="font-sample" style="font-family: 'IBM Plex Mono', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('JetBrains Mono', 'JetBrains Mono')">
+        <div class="font-name">4. JetBrains Mono (developer terminal)</div>
+        <p class="font-sample" style="font-family: 'JetBrains Mono', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Inconsolata', 'Inconsolata')">
+        <div class="font-name">5. Inconsolata (minimalist hacker)</div>
+        <p class="font-sample" style="font-family: 'Inconsolata', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Space Mono', 'Space Mono')">
+        <div class="font-name">6. Space Mono (geometric retro)</div>
+        <p class="font-sample" style="font-family: 'Space Mono', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Overpass Mono', 'Overpass Mono')">
+        <div class="font-name">7. Overpass Mono (sleek terminal)</div>
+        <p class="font-sample" style="font-family: 'Overpass Mono', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Anonymous Pro', 'Anonymous Pro')">
+        <div class="font-name">8. Anonymous Pro (coder's font)</div>
+        <p class="font-sample" style="font-family: 'Anonymous Pro', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Press Start 2P', 'Press Start 2P')">
+        <div class="font-name">9. Press Start 2P (8-bit gaming)</div>
+        <p class="font-sample" style="font-family: 'Press Start 2P', monospace; font-size: 18px;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="font-option" onclick="selectFont('Roboto Mono', 'Roboto Mono')">
+        <div class="font-name">10. Roboto Mono (modern minimal)</div>
+        <p class="font-sample" style="font-family: 'Roboto Mono', monospace;">Anna Hedström</p>
+        <button class="button">Choose This</button>
+    </div>
+
+    <div class="button-group">
+        <p style="color: #888; font-size: 14px;">Click on a font to preview it on your site</p>
+        <div class="success-message" id="successMessage">✓ Font updated! Visit <a href="/" style="color: #0a7;">the homepage</a> to see it live.</div>
+    </div>
+
+    <script>
+        function selectFont(fontName, fontFamily) {
+            // Store the selection
+            localStorage.setItem('selectedFont', fontFamily);
+            
+            // Update UI to show selection
+            document.querySelectorAll('.font-option').forEach(el => el.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+            
+            // Show the command to apply
+            const command = `cd /Users/annahedstrom/Projects/annahedstroem.github.io && python3 update-font.py "${fontFamily}"`;
+            const msg = document.getElementById('successMessage');
+            msg.innerHTML = `
+                <strong>✓ Selected: ${fontFamily}</strong><br>
+                <span style="font-size: 12px; color: #666;">Run this command to apply it:</span><br>
+                <code style="display: block; background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 3px; word-break: break-all;">${command}</code>
+                <button onclick="copyCommand('${command}')" style="padding: 6px 12px; margin-top: 8px; border: 1px solid #ccc; background: white; cursor: pointer; border-radius: 3px;">Copy Command</button>
+            `;
+            msg.style.display = 'block';
+        }
+        
+        function copyCommand(cmd) {
+            navigator.clipboard.writeText(cmd).then(() => {
+                alert('Command copied! Paste it into your terminal.');
+            });
+        }
+        
+        // Load saved font on page load
+        window.addEventListener('load', () => {
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.querySelectorAll('.font-option').forEach(el => {
+                    if (el.textContent.includes(savedFont)) {
+                        el.classList.add('selected');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

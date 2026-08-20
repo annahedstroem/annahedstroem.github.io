@@ -1,11 +1,12 @@
 /* Minimal style inspired by lorenzkuhn.com (WordPress Cyanotype theme vibes) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap');
 :root{--bg:#ffffff;--text:#000000;--muted:#444;--link:#000;--border:#eaeaea}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:14px}
 .container{max-width:900px;margin:0 auto;padding:24px}
 .site-header{padding:24px 0;border-bottom:1px solid var(--border)}
-.site-title{font-size:28px;margin:0;font-family:"JetBrains Mono",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace}
+.site-title{font-size:28px;margin:0;font-family:"VT323",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;letter-spacing:3px;font-weight:400;line-height:1.8}
 .site-title a{color:var(--text);text-decoration:none}
 .social{display:flex;gap:12px;margin-top:8px}
 .social a{color:var(--text);text-decoration:none}
@@ -17,7 +18,7 @@ html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe U
 
 img.profile{display:block;max-width:100%;height:auto;border-radius:4px}
 
-h2{font-size:22px;margin:48px 0 14px;font-family:"JetBrains Mono",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace}
+h2{font-size:22px;margin:48px 0 14px;font-family:"VT323",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;letter-spacing:3px;font-weight:400;line-height:1.8}
 a{color:var(--link)}
 p{margin:0 0 14px}
 ul{margin:0 0 14px;padding-left:20px}
