@@ -16,7 +16,7 @@ html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe U
 .column-right{flex:1}
 @media(max-width:800px){.columns{flex-direction:column}.column-left{max-width:340px}.column-right{max-width:100%}}
 
-img.profile{display:block;max-width:100%;height:auto;border-radius:4px}
+img.profile{display:block;max-width:90%;height:auto;border-radius:4px}
 
 h2{font-size:22px;margin:48px 0 14px;font-family:"VT323",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;letter-spacing:3px;font-weight:400;line-height:1.8}
 a{color:var(--link)}
@@ -29,11 +29,15 @@ ul{margin:0 0 14px;padding-left:20px}
 .icon{width:18px;height:18px;display:inline-block;vertical-align:text-bottom;fill:currentColor}
 
 /* Publications */
-.pub-item{margin:0 0 14px;border:1px solid var(--border);border-radius:8px;padding:16px 18px;overflow:hidden}
-.pub-title{font-weight:700;font-size:16px;margin:0 0 2px}
-.pub-authors{margin:0 0 2px}
-.pub-meta{color:var(--muted);display:inline}
+.pub-year{font-size:18px;font-weight:600;margin:32px 0 20px;padding-bottom:12px;border-bottom:1px solid var(--border);font-family:"VT323",ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace;letter-spacing:2px}
+.pub-item{margin:0 0 20px;border:none;border-radius:0;padding:0;overflow:visible;background:transparent}
+.pub-item img{display:none}
+.pub-title{font-weight:700;font-size:13px;margin:0 0 6px;font-family:inherit;letter-spacing:0}
+.pub-title a{color:var(--text);text-decoration:underline}
+.pub-authors{margin:0 0 6px;font-size:14px;line-height:1.5}
+.pub-meta{color:var(--text);display:inline;font-size:14px}
 .badge-teal{color:#118a8a;font-weight:700}
+.pub-meta-toggle{display:none}
 
 /* Buttons */
 .btn-group{display:inline-flex;gap:4px;flex-wrap:wrap;margin-top:0;margin-left:8px;vertical-align:baseline;align-items:center}
